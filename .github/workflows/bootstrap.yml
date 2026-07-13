@@ -1,0 +1,38 @@
+name: Bootstrap Solidity Learning Lab
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Expand learning lab package
+        shell: bash
+        run: |
+          set -euo pipefail
+          base64 --decode lab-package.tar.gz.b64 > /tmp/solidity-lab-package.tar.gz
+          tar -xzf /tmp/solidity-lab-package.tar.gz
+          rm -f lab-package.tar.gz.b64
+          rm -f .github/workflows/bootstrap.yml
+
+      - name: Commit complete learning lab
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all
+          if git diff --cached --quiet; then
+            echo "No repository changes were produced."
+            exit 0
+          fi
+          git commit -m "Install complete Solidity security learning lab"
+          git push origin HEAD:main
