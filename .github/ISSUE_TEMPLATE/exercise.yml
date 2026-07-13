@@ -1,0 +1,28 @@
+name: Learning Exercise
+description: Track a Solidity security exercise from scope through remediation.
+title: "Exercise: "
+labels: ["learning", "security-review"]
+body:
+  - type: input
+    id: objective
+    attributes:
+      label: Learning objective
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and prerequisites
+    validations:
+      required: true
+  - type: checkboxes
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      options:
+        - label: Threat model completed
+        - label: Proof-of-concept test completed
+        - label: Finding report completed
+        - label: Remediation completed
+        - label: Regression test completed
+        - label: Skills matrix updated with evidence

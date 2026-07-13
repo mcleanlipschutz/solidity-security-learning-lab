@@ -1,0 +1,1 @@
+Reminder: complete the threat model and normal-behavior test before attempting the proof of concept. The exercise is not complete until the finding, remediation, and regression test are documented in the repository.
