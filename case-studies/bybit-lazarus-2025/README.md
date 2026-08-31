@@ -3,7 +3,7 @@
 
 ## Why I Used a Public Case
 
-Most of the cryptocurrency investigations I work involve law-enforcement records, victim information, investigative leads, preservation requests, subpoenas, and other material that I cannot post publicly.
+Most of the cryptocurrency investigations I work on involve law-enforcement records, victim information, investigative leads, preservation requests, subpoenas, and other material that I cannot post publicly.
 
 This case study is different. Everything used here comes from public blockchain data, government reporting, public incident reports, and published blockchain-intelligence research. The purpose is to show how I approach a large crypto investigation without disclosing information from an actual case.
 
